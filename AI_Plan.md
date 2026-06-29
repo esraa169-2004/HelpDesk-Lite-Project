@@ -28,9 +28,19 @@ Implementation & Verification: I applied the code, then verified it by running a
 
 2. Debugging and Verification Example
 Scenario: A "403 Forbidden" error when trying to update a ticket status.
-
 Investigation: I inspected the browser console and the network tab in the developer tools.
 
 Evidence: The logs showed that the Row Level Security (RLS) policy was blocking the UPDATE operation because it lacked the correct user authentication check.
 
-Final Decision: I decided to revise the RLS policy. I updated the policy to allow updates only when auth.uid() matches the assigned_agent_id. After applying the fix, I verified that the error disappeared and the status updated successfully.
+Final Decision: I decided to revise the RLS policy. I updated the policy to allow updates only when auth.uid() matches the assigned_agent_id. After applying the fix, I verified that the error disappeared and the status updated successfully
+*************************************************************************************************
+3. Staying Current Plan
+To avoid relying on stale assumptions about AI tools, the team will:
+
+Trusted Sources: Regularly check the official Supabase blog and the Bolt.new GitHub discussions for updates on tool capabilities.
+
+Periodic Review: We will hold a brief weekly sync to discuss if new AI features can safely improve our workflow without compromising code quality.
+******************************************************************************************************************************************************
+
+AI Workflow Summary (Brief Explanation)
+My AI workflow protects the delivery quality by ensuring AI is used only as a support tool, not a decision-maker. By setting strict context boundaries, I prevent the AI from accessing unnecessary files. The "plan-first" coding approach ensures I review every AI proposal before implementation, while evidence-based debugging and human-led verification ensure that all changes align with the original project requirements, keeping the human in control
